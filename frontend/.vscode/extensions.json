@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "microsoft.eslint",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "bradlc.vscode-tailwindcss",
+    "aaron-bond.better-comments"
+  ]
+}
