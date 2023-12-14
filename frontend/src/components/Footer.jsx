@@ -1,4 +1,5 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export function SimpleFooter() {
   return (
@@ -9,7 +10,8 @@ export function SimpleFooter() {
       <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
         <li>
           <Typography
-            as="a"
+            as={Link}
+            to="/services"
             href="#"
             color="blue-gray"
             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
@@ -19,7 +21,8 @@ export function SimpleFooter() {
         </li>
         <li>
           <Typography
-            as="a"
+            as={Link}
+            to="/project"
             href="#"
             color="blue-gray"
             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
@@ -29,7 +32,8 @@ export function SimpleFooter() {
         </li>
         <li>
           <Typography
-            as="a"
+            as={Link}
+            to="/team"
             href="#"
             color="blue-gray"
             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
@@ -39,7 +43,8 @@ export function SimpleFooter() {
         </li>
         <li>
           <Typography
-            as="a"
+            as={Link}
+            to="/about"
             href="#"
             color="blue-gray"
             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"

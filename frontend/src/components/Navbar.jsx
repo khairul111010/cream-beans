@@ -4,9 +4,10 @@ import {
   Collapse,
   Typography,
   IconButton,
+  Button,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
+// import { Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function NavList() {
@@ -48,9 +49,10 @@ function NavList() {
       >
         About Us
       </Typography>
-      <Button as={Link} to="/contact-us">
+      <Button as={Link} to="/contact-us bg-#6F4E37 hover:bg-#8B634B">
         Contact Us
       </Button>
+        
     </ul>
   );
 }
