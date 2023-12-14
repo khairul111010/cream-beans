@@ -1,10 +1,5 @@
-import CarouselDefault from "../components/Carosel";
 function Home() {
-  return (
-    <>
-      <CarouselDefault />
-    </>
-  );
+  return <div className="h-[1300px]">{/* <CarouselDefault /> */}</div>;
 }
 
 export default Home;

@@ -1,10 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Project from "./pages/Project";
-import Team from "./pages/Team";
 import About from "./pages/Aboutus";
+import Discuss from "./pages/Discuss";
+import Home from "./pages/Home";
+import Project from "./pages/Project";
+import Services from "./pages/Services";
+import Team from "./pages/Team";
 // import About from "./pages/AboutUs"; // Adjusted the import for consistency
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="project" element={<Project />} />
           <Route path="team" element={<Team />} />
           <Route path="about" element={<About />} />
+          <Route path="discuss" element={<Discuss />} />
         </Route>
       </Routes>
     </BrowserRouter>
