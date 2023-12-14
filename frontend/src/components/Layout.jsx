@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import NavbarSimple from "./Navbar";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <div className="mt-[5vh]">
+      <NavbarSimple />
+      <div className="">
         <Outlet />
       </div>
 
