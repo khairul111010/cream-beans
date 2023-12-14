@@ -5,6 +5,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -12,58 +13,44 @@ function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
-        as="li"
+        as={Link} // Use Link from react-router-dom
+        to="/services" // Specify the path
         variant="small"
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a
-          href="#"
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          Services
-        </a>
+        Services
       </Typography>
       <Typography
-        as="li"
+        as={Link}
+        to="/project"
         variant="small"
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a
-          href="#"
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          Project
-        </a>
+        Project
       </Typography>
       <Typography
-        as="li"
+        as={Link}
+        to="/team"
         variant="small"
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a
-          href="#"
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          Team
-        </a>
+        Team
       </Typography>
       <Typography
-        as="li"
+        as={Link}
+        to="/about"
         variant="small"
         color="blue-gray"
         className="p-1 font-medium"
       >
-        <a
-          href="#"
-          className="flex items-center hover:text-blue-500 transition-colors"
-        >
-          About Us
-        </a>
+        About Us
       </Typography>
-      <Button>Contact Us</Button>
+      <Button as={Link} to="/contact-us">
+        Contact Us
+      </Button>
     </ul>
   );
 }
@@ -86,7 +73,8 @@ export function NavbarSimple() {
     <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
-          as="a"
+          as={Link}
+          to="/"
           href="#"
           variant="h6"
           className="mr-4 cursor-pointer py-1.5"
