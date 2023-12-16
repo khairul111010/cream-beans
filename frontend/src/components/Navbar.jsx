@@ -14,7 +14,7 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <div className="fixed top-0 left-0 right-0">
+    <div className="fixed top-0 left-0 right-0 bg-white">
       <Link
         to={"/discuss"}
         className="text-center bg-secordary text-white p-1 block"
@@ -22,7 +22,7 @@ const Navbar = () => {
         Learn how we can increase your web visibility
       </Link>
       <div className="max-w-[80%] p-2 hidden mx-auto md:flex items-center justify-between">
-        <Link to={"/"} className="text-2xl">
+        <Link to={"/"} className="text-2xl font-semibold">
           CreamBeans
         </Link>
         <div className="flex items-center justify-between gap-5">
@@ -30,7 +30,7 @@ const Navbar = () => {
             return (
               <Link
                 to={nav.to}
-                className="relative after:content-[''] after:absolute after:top-0 after:-right-2 after:w-0 after:h-0 transition-all duration-1000 hover:after:h-2 hover:after:w-2 after:bg-primary after:rounded-full"
+                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 transition-opacity ease-in-out duration-300 after:h-2 after:w-2 after:bg-secordary after:rounded-full"
               >
                 {nav.name}
               </Link>

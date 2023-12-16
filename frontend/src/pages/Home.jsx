@@ -1,5 +1,5 @@
 function Home() {
-  return <div className="h-[1300px]">{/* <CarouselDefault /> */}</div>;
+  return <div className="h-[1300px]">ghello</div>;
 }
 
 export default Home;
