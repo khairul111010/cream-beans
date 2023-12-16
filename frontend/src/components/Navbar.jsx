@@ -49,10 +49,9 @@ function NavList() {
       >
         About Us
       </Typography>
-      <Button as={Link} to="/contact-us bg-#6F4E37 hover:bg-#8B634B">
+      <Button as={Link} to="/contact-us bg-#6F4E37 bg-Brown-500">
         Contact Us
       </Button>
-        
     </ul>
   );
 }
