@@ -21,16 +21,17 @@ const Navbar = () => {
       >
         Learn how we can increase your web visibility
       </Link>
-      <div className="max-w-[80%] p-2 hidden mx-auto md:flex items-center justify-between">
+      <div className="max-w-[80%] py-2 hidden mx-auto md:flex items-center justify-between">
         <Link to={"/"} className="text-2xl font-semibold">
           CreamBeans
         </Link>
         <div className="flex items-center justify-between gap-5">
-          {routes.map((nav) => {
+          {routes.map((nav, index) => {
             return (
               <Link
+                key={index}
                 to={nav.to}
-                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 transition-opacity ease-in-out duration-300 after:h-2 after:w-2 after:bg-secordary after:rounded-full"
+                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-secordary after:rounded-full"
               >
                 {nav.name}
               </Link>
@@ -46,7 +47,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar  */}
-      <div className="flex items-center justify-between p-2 md:hidden max-w-[90%] mx-auto">
+      <div className="flex items-center justify-between py-2 md:hidden max-w-[90%] mx-auto">
         <Link to={"/"} className="text-2xl">
           CreamBeans
         </Link>
@@ -92,9 +93,10 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col text-lg border border-black/20 divide-y divide-black/20">
-          {routes.map((nav) => {
+          {routes.map((nav, index) => {
             return (
               <Link
+                key={index}
                 to={nav.to}
                 className="p-4 flex items-center justify-between"
               >
