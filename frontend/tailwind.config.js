@@ -23,11 +23,8 @@ export default withMT({
   theme: {
     extend: {
       colors: {
-        brown: {
-          400: "#8d6e63",
-          500: "#795548",
-          600: "#6d4c41",
-        },
+        primary: "#489dda",
+        secordary: "#0a122e",
       },
     },
   },

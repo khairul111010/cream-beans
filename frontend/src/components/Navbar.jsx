@@ -1,109 +1,125 @@
-import React from "react";
-import {
-  Navbar,
-  Collapse,
-  Typography,
-  IconButton,
-  Button,
-} from "@material-tailwind/react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import { Button } from "@material-tailwind/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { routes } from "../routes";
 
-function NavList() {
-  return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as={Link} // Use Link from react-router-dom
-        to="/services" // Specify the path
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        Services
-      </Typography>
-      <Typography
-        as={Link}
-        to="/project"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        Project
-      </Typography>
-      <Typography
-        as={Link}
-        to="/team"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        Team
-      </Typography>
-      <Typography
-        as={Link}
-        to="/about"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-medium"
-      >
-        About Us
-      </Typography>
-      <Button as={Link} to="/contact-us bg-#6F4E37 bg-Brown-500">
-        Contact Us
-      </Button>
-    </ul>
-  );
-}
+const Navbar = () => {
+  const [open, setOpen] = useState(false);
 
-export function NavbarSimple() {
-  const [openNav, setOpenNav] = React.useState(false);
-
-  const handleWindowResize = () =>
-    window.innerWidth >= 960 && setOpenNav(false);
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [open]);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-6 py-3">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as={Link}
-          to="/"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5"
-          text-color="#6F4E37"
-        >
-          Cream Beans
-        </Typography>
-        <div className="hidden lg:block">
-          <NavList />
+    <div className="fixed top-0 left-0 right-0">
+      <Link
+        to={"/discuss"}
+        className="text-center bg-secordary text-white p-1 block"
+      >
+        Learn how we can increase your web visibility
+      </Link>
+      <div className="max-w-[80%] p-2 hidden mx-auto md:flex items-center justify-between">
+        <Link to={"/"} className="text-2xl">
+          CreamBeans
+        </Link>
+        <div className="flex items-center justify-between gap-5">
+          {routes.map((nav) => {
+            return (
+              <Link
+                to={nav.to}
+                className="relative after:content-[''] after:absolute after:top-0 after:-right-2 after:w-0 after:h-0 transition-all duration-1000 hover:after:h-2 hover:after:w-2 after:bg-primary after:rounded-full"
+              >
+                {nav.name}
+              </Link>
+            );
+          })}
         </div>
-        <IconButton
-          variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
-          onClick={() => setOpenNav(!openNav)}
+        <Link
+          className="bg-primary px-3 py-2 text-white hover:bg-secordary transition-all duration-300 rounded-md"
+          to={"/discuss"}
         >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
+          Discuss a Project
+        </Link>
       </div>
-      <Collapse open={openNav}>
-        <NavList />
-      </Collapse>
-    </Navbar>
-  );
-}
 
-export default NavbarSimple;
+      {/* Mobile Navbar  */}
+      <div className="flex items-center justify-between p-2 md:hidden max-w-[90%] mx-auto">
+        <Link to={"/"} className="text-2xl">
+          CreamBeans
+        </Link>
+        <svg
+          onClick={() => setOpen(true)}
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
+          />
+        </svg>
+      </div>
+      <div
+        className={`absolute top-0 right-0 h-screen md:hidden bg-white w-screen z-50 ${
+          open ? "translate-x-0" : "translate-x-full"
+        } transition-all duration-300`}
+      >
+        <div className="flex items-center justify-end mt-10">
+          <div className="p-4">
+            <svg
+              onClick={() => setOpen(false)}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div className="flex flex-col text-lg border border-black/20 divide-y divide-black/20">
+          {routes.map((nav) => {
+            return (
+              <Link
+                to={nav.to}
+                className="p-4 flex items-center justify-between"
+              >
+                <div>{nav.name}</div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
