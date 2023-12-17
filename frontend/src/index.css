@@ -14,11 +14,11 @@
   @apply bg-transparent;
 }
 *::-webkit-scrollbar-thumb {
-  @apply bg-secordary;
+  @apply bg-secondary;
 }
 *::-webkit-scrollbar-thumb:hover {
-  @apply bg-secordary;
+  @apply bg-secondary;
 }
 *::-webkit-scrollbar-thumb:active {
-  @apply bg-secordary;
+  @apply bg-secondary;
 }

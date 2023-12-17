@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { routes } from "../routes";
 
@@ -14,10 +14,10 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white">
+    <div className="fixed top-0 left-0 right-0 bg-white border-b">
       <Link
         to={"/discuss"}
-        className="text-center bg-secordary text-white p-1 block"
+        className="text-center bg-secondary text-white p-1 block"
       >
         Learn how we can increase your web visibility
       </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={nav.to}
-                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-secordary after:rounded-full"
+                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-secondary after:rounded-full"
               >
                 {nav.name}
               </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
           })}
         </div>
         <Link
-          className="bg-primary px-3 py-2 text-white hover:bg-secordary transition-all duration-300 rounded-md"
+          className="bg-primary px-3 py-2 text-white hover:bg-secondary transition-all duration-300 rounded-md"
           to={"/discuss"}
         >
           Discuss a Project
