@@ -21,15 +21,16 @@ const Home = () => {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
       const t2 = gsap.timeline();
+
       if (!hasPlayed) {
         t1.from(headlineRef.current, {
           xPercent: -100,
           ease: "power4.out",
           delay: 0.3,
-        }).from([sublineRef.current, buttonRef.current], {
+        }).from([sublineRef.current,buttonRef.current],{
           opacity: 0,
-          ease: "expo.inOut",
-          delay: 0.4,
+          ease: "power4.out",
+          delay: 0.1,
           stagger: 0.6,
           onComplete: function () {
             sessionStorage.setItem(
@@ -42,16 +43,16 @@ const Home = () => {
         t2.from(heroBannerRef.current,{
           opacity: 0,
           ease: "power4.out",
-          delay: 0.3,
+          delay: 0.4,
         })
       }
-    }, heroRef);
+    }, [heroRef]);
     return () => ctx.revert();
   }, []);
 
   return (
     <>
-      <div className="max-w-[90%] flex items-center mx-auto md:grid grid-cols-2 md:max-w-[80%] overflow-hidden h-[calc(70vh-88px)] content-center">
+      <div className="max-w-[90%] flex items-center mx-auto md:grid grid-cols-2 md:max-w-[80%] overflow-hidden content-center py-4">
         <div
           ref={heroRef}
           className="flex flex-col justify-center gap-6 flex-grow"
@@ -71,13 +72,13 @@ const Home = () => {
             business growth and achieve your goals seamlessly
           </h3>
 
-          <div
+          <button
             ref={buttonRef}
             onClick={() => navigate("/discuss")}
-            className="cursor-pointer bg-primary px-3 py-2 text-white hover:bg-white hover:text-secondary border hover:border-secondary transition-all duration-300 rounded-md w-fit"
+            className="cursor-pointer bg-primary px-3 py-2 text-white hover:bg-white hover:text-secondary border hover:border-secondary rounded-md w-fit"
           >
             Let&apos;s discuss
-          </div>
+          </button>
         </div>
         <div ref={heroBannerRef} className="hidden md:block">
           <img
@@ -87,9 +88,9 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-5 md:py-10 rounded-lg bg-brown-200/20 mb-6">
-        <div className="text-center md:text-base text-sm">We are also <span className="text-primary font-bold">available</span> on</div>
-        <div className="flex items-center justify-center gap-16 rounded-lg py-10 px-2">
+      <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6">
+        <div className="text-center md:text-xl text-sm">We are also <span className="text-primary font-bold">available</span> on</div>
+        <div className="flex items-center justify-center gap-16 rounded-lg md:py-10 md:px-3 py-3 px-7">
           <div>
             <img src={Upwork} alt="" className="h-11 w-auto" />
           </div>
