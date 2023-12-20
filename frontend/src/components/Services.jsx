@@ -34,7 +34,7 @@ Card1.propTypes = {
   className: PropTypes.string,
 };
 
-export const Services = () => {
+const Services = () => {
   return (
     <>
       <div className="flex items-center justify-center  bg-coffee">
@@ -82,3 +82,4 @@ export const Services = () => {
     </>
   );
 };
+export default Services;

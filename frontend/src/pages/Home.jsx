@@ -1,12 +1,11 @@
 import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import Clutch from "../assets/clutch.svg";
+import Fiverr from "../assets/fiverr.svg";
 import Hero from "../assets/hero.svg";
 import Upwork from "../assets/upwork.svg";
-import Fiverr from "../assets/fiverr.svg";
-import Clutch from "../assets/clutch.svg";
-import { Services } from "../components/Services";
-
+import Services from "../components/Services";
 const Home = () => {
   const heroRef = useRef(null);
   const headlineRef = useRef(null);
@@ -27,32 +26,36 @@ const Home = () => {
           xPercent: -100,
           ease: "power4.out",
           delay: 0.3,
-        }).from([sublineRef.current, buttonRef.current], {
-          opacity: 0,
-          ease: "expo.inOut",
-          delay: 0.4,
-          stagger: 0.6,
-          onComplete: function () {
-            sessionStorage.setItem(
-              import.meta.env.VITE_HASPLAYEDHEADLINE,
-              true
-            );
-          },
-        });
+        })
+          .to(headlineRef.current, {
+            zIndex: -50,
+          })
+          .from([sublineRef.current, buttonRef.current], {
+            opacity: 0,
+            ease: "power4.out",
+            delay: 0.1,
+            stagger: 0.6,
+            onComplete: function () {
+              sessionStorage.setItem(
+                import.meta.env.VITE_HASPLAYEDHEADLINE,
+                true
+              );
+            },
+          });
 
         t2.from(heroBannerRef.current, {
           opacity: 0,
           ease: "power4.out",
-          delay: 0.3,
+          delay: 0.4,
         });
       }
-    }, heroRef);
+    }, [heroRef]);
     return () => ctx.revert();
   }, []);
 
   return (
     <>
-      <div className="max-w-[90%] flex items-center mx-auto md:grid grid-cols-2 md:max-w-[80%] overflow-hidden h-[calc(70vh-88px)] content-center">
+      <div className="max-w-[90%] flex items-center mx-auto md:grid grid-cols-2 md:max-w-[80%] overflow-hidden content-center py-4">
         <div
           ref={heroRef}
           className="flex flex-col justify-center gap-6 flex-grow"
@@ -75,13 +78,13 @@ const Home = () => {
             business growth and achieve your goals seamlessly
           </h3>
 
-          <div
+          <button
             ref={buttonRef}
             onClick={() => navigate("/discuss")}
-            className="cursor-pointer bg-primary px-3 py-2 text-white hover:bg-white hover:text-secondary border hover:border-secondary transition-all duration-300 rounded-md w-fit"
+            className="cursor-pointer bg-primary px-3 py-2 text-white hover:bg-white hover:text-secondary border hover:border-secondary rounded-md w-fit"
           >
             Let&apos;s discuss
-          </div>
+          </button>
         </div>
         <div ref={heroBannerRef} className="hidden md:block">
           <img
@@ -92,12 +95,12 @@ const Home = () => {
         </div>
       </div>
       <Services />
-      <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-5 md:py-10 rounded-lg bg-brown-200/20 mb-6">
-        <div className="text-center md:text-base text-sm">
+      <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6">
+        <div className="text-center md:text-xl text-sm">
           We are also <span className="text-primary font-bold">available</span>{" "}
           on
         </div>
-        <div className="flex items-center justify-center gap-16 rounded-lg py-10 px-2">
+        <div className="flex items-center justify-center gap-16 rounded-lg md:py-10 md:px-3 py-3 px-7">
           <div>
             <img src={Upwork} alt="" className="h-11 w-auto" />
           </div>
@@ -108,6 +111,10 @@ const Home = () => {
             <img src={Fiverr} alt="" className="h-11 w-auto" />
           </div>
         </div>
+      </div>
+
+      <div className="md:max-w-[80%] max-w-[90%] mx-auto">
+        <div className="mt-7"></div>
       </div>
     </>
   );
