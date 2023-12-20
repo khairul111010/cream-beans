@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { routes } from "../routes";
 
@@ -14,23 +14,24 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <div className="fixed top-0 left-0 right-0">
+    <div className="fixed top-0 left-0 right-0 bg-white border-b">
       <Link
         to={"/discuss"}
-        className="text-center bg-secordary text-white p-1 block"
+        className="text-center bg-secondary text-white p-1 block"
       >
         Learn how we can increase your web visibility
       </Link>
-      <div className="max-w-[80%] p-2 hidden mx-auto md:flex items-center justify-between">
-        <Link to={"/"} className="text-2xl">
+      <div className="max-w-[80%] py-2 hidden mx-auto md:flex items-center justify-between">
+        <Link to={"/"} className="text-2xl font-semibold">
           CreamBeans
         </Link>
         <div className="flex items-center justify-between gap-5">
-          {routes.map((nav) => {
+          {routes.map((nav, index) => {
             return (
               <Link
+                key={index}
                 to={nav.to}
-                className="relative after:content-[''] after:absolute after:top-0 after:-right-2 after:w-0 after:h-0 transition-all duration-1000 hover:after:h-2 hover:after:w-2 after:bg-primary after:rounded-full"
+                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-secondary after:rounded-full"
               >
                 {nav.name}
               </Link>
@@ -38,7 +39,7 @@ const Navbar = () => {
           })}
         </div>
         <Link
-          className="bg-primary px-3 py-2 text-white hover:bg-secordary transition-all duration-300 rounded-md"
+          className="bg-primary px-3 py-2 text-white hover:bg-secondary transition-all duration-300 rounded-md"
           to={"/discuss"}
         >
           Discuss a Project
@@ -46,7 +47,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar  */}
-      <div className="flex items-center justify-between p-2 md:hidden max-w-[90%] mx-auto">
+      <div className="flex items-center justify-between py-2 md:hidden max-w-[90%] mx-auto">
         <Link to={"/"} className="text-2xl">
           CreamBeans
         </Link>
@@ -92,9 +93,10 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col text-lg border border-black/20 divide-y divide-black/20">
-          {routes.map((nav) => {
+          {routes.map((nav, index) => {
             return (
               <Link
+                key={index}
                 to={nav.to}
                 className="p-4 flex items-center justify-between"
               >

@@ -7,8 +7,12 @@ export function SimpleFooter() {
       <div className="text-center">&copy; CreamBeans</div>
       <div className="flex items-center justify-center">
         <div className="flex items-center justify-between gap-5 p-6 w-[400px]">
-          {routes.map((nav) => {
-            return <Link to={nav.to}>{nav.name}</Link>;
+          {routes.map((nav, index) => {
+            return (
+              <Link key={index} to={nav.to}>
+                {nav.name}
+              </Link>
+            );
           })}
         </div>
       </div>

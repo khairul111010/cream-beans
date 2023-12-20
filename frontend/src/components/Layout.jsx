@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div className="mt-[10vh]">
+      <div className="mt-[88px]">
         <Outlet />
       </div>
 
