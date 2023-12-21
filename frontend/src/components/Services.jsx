@@ -5,81 +5,73 @@ import app from "../assets/App.png";
 import UI from "../assets/UI.png";
 import QA from "../assets/QA.jpg";
 import DEV from "../assets/Dev.svg";
+import web from "../assets/web.svg";
+import mvp from "../assets/mvp.svg";
+import mobile from "../assets/mobile.svg";
+import blockchain from "../assets/blockchain.svg";
+import aws from "../assets/aws.svg";
+import ui from "../assets/ui.svg";
 
-function Card1({ heading, description, img, className }) {
-  return (
-    <div
-      className={`flex gap-4 rounded-xl shadow-sm p-6 ${className} transform transition-transform hover:scale-105`}
-    >
-      <div className="min-w-max">
-        {/* Use the img prop for the image */}
-        <img
-          src={img}
-          alt="Icon"
-          className="max-w-full h-auto w-12 text-[#DDA10C]" // Adjust the width (w-12) as needed
-        />
-      </div>
-      <div className="space-y-2">
-        <h3 className="text-2xl font-semibold">{heading}</h3>
-        <p className="leading-8 text-gray-500 font-normal">{description}</p>
-      </div>
-    </div>
-  );
-}
 
-Card1.propTypes = {
-  heading: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  img: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
 
 const Services = () => {
   return (
-    <>
-      <div className="flex items-center justify-center   bg-coffee">
-        <h1 className="font-bold text-4xl">What we do?</h1>
+    <div className="grid md:grid-cols-3 grid-cols-1 mt-4 gap-8 md:max-w-[80%] max-w-[90%] mx-auto overflow-hidden">
+      <div className="bg-white rounded-lg px-10 pb-10 pt-14 shadow transition-all duration-100 ease-in-out flex flex-col items-center gap-4">
+        <div>
+          <img src={web} alt="" srcset="" className="h-14 w-auto" />
+        </div>
+        <div>
+          <h1 className="text-center text-2xl font-semibold mb-2">Web Development</h1>
+          <p className="text-center">We provide high quality software development at your need. You will be able to develop any kind software with fast pace and efficiency</p>
+        </div>
       </div>
-
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-3 xl:grid-cols-3 bg-white p-3 sm:p-8">
-        <Card1
-          className="bg-[#fcf4ff]"
-          heading="Blockchain Development"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
-          img={blockchainlogo}
-        />
-        <Card1
-          className="bg-[#fefaf0]"
-          heading="Web Development"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
-          img={webdev}
-        />
-        <Card1
-          className="bg-[#fff4f4]"
-          heading="Mobile App Development"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
-          img={app}
-        />
-        <Card1
-          className="bg-[#f3faff]"
-          heading="UI/UX"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
-          img={UI}
-        />
-        <Card1
-          className="bg-[#fff4f4]"
-          heading="Testing & QA"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
-          img={QA}
-        />
-        <Card1
-          className="bg-[#f3faff]"
-          heading="DevOps"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat."
-          img={DEV}
-        />
+      <div className="bg-white rounded-lg px-10 pb-10 pt-14 shadow transition-all duration-100 ease-in-out flex flex-col items-center gap-4">
+        <div>
+          <img src={mvp} alt="" srcset="" className="h-14 w-auto" />
+        </div>
+        <div>
+          <h1 className="text-center text-2xl font-semibold mb-2">MVP</h1>
+          <p className="text-center">We provide high quality software development at your need. You will be able to develop any kind software with fast pace and efficiency</p>
+        </div>
       </div>
-    </>
+      <div className="bg-white rounded-lg px-10 pb-10 pt-14 shadow transition-all duration-100 ease-in-out flex flex-col items-center gap-4">
+        <div>
+          <img src={mobile} alt="" srcset="" className="h-14 w-auto" />
+        </div>
+        <div>
+          <h1 className="text-center text-2xl font-semibold mb-2">Mobile App Development</h1>
+          <p className="text-center">We provide high quality software development at your need. You will be able to develop any kind software with fast pace and efficiency</p>
+        </div>
+      </div>
+      <div className="bg-white rounded-lg px-10 pb-10 pt-14 shadow transition-all duration-100 ease-in-out flex flex-col items-center gap-4">
+        <div>
+          <img src={blockchain} alt="" srcset="" className="h-14 w-auto" />
+        </div>
+        <div>
+          <h1 className="text-center text-2xl font-semibold mb-2">Blockchain Development</h1>
+          <p className="text-center">We provide high quality software development at your need. You will be able to develop any kind software with fast pace and efficiency</p>
+        </div>
+      </div>
+      <div className="bg-white rounded-lg px-10 pb-10 pt-14 shadow transition-all duration-100 ease-in-out flex flex-col items-center gap-4">
+        <div>
+          <img src={aws} alt="" srcset="" className="h-14 w-auto" />
+        </div>
+        <div>
+          <h1 className="text-center text-2xl font-semibold mb-2">DevOps</h1>
+          <p className="text-center">We provide high quality software development at your need. You will be able to develop any kind software with fast pace and efficiency</p>
+        </div>
+      </div>
+      <div className="bg-white rounded-lg px-10 pb-10 pt-14 shadow transition-all duration-100 ease-in-out flex flex-col items-center gap-4">
+        <div>
+          <img src={ui} alt="" srcset="" className="h-14 w-auto" />
+        </div>
+        <div>
+          <h1 className="text-center text-2xl font-semibold mb-2">UI/UX</h1>
+          <p className="text-center">We provide high quality software development at your need. You will be able to develop any kind software with fast pace and efficiency</p>
+        </div>
+      </div>
+    </div>
   );
 };
 export default Services;
