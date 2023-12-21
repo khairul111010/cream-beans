@@ -6,6 +6,7 @@ import Fiverr from "../assets/fiverr.svg";
 import Hero from "../assets/hero.svg";
 import Upwork from "../assets/upwork.svg";
 import Services from "../components/Services";
+import Technlogy from "../components/Technlogy";
 const Home = () => {
   const heroRef = useRef(null);
   const headlineRef = useRef(null);
@@ -95,6 +96,7 @@ const Home = () => {
         </div>
       </div>
       <Services />
+      <Technlogy />
       <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6">
         <div className="text-center md:text-xl text-sm">
           We are also <span className="text-primary font-bold">available</span>{" "}

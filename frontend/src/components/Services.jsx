@@ -37,7 +37,7 @@ Card1.propTypes = {
 const Services = () => {
   return (
     <>
-      <div className="flex items-center justify-center  bg-coffee">
+      <div className="flex items-center justify-center   bg-coffee">
         <h1 className="font-bold text-4xl">What we do?</h1>
       </div>
 
