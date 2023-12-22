@@ -6,6 +6,7 @@ import Fiverr from "../assets/fiverr.svg";
 import Hero from "../assets/hero.svg";
 import Upwork from "../assets/upwork.svg";
 import Services from "../components/Services";
+import Stacks from "../components/Stacks";
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -13,6 +14,7 @@ const Home = () => {
   const heroBannerRef = useRef(null);
   const sublineRef = useRef(null);
   const buttonRef = useRef(null);
+  const servicesRef = useRef(null);
   const navigate = useNavigate();
 
   useLayoutEffect(() => {
@@ -22,6 +24,7 @@ const Home = () => {
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
       const t2 = gsap.timeline();
+      const t3 = gsap.timeline();
       if (!hasPlayed) {
         t1.from(headlineRef.current, {
           xPercent: -100,
@@ -35,7 +38,7 @@ const Home = () => {
             opacity: 0,
             ease: "power4.out",
             delay: 0.1,
-            stagger: 0.6,
+            stagger: 0.3,
             onComplete: function () {
               sessionStorage.setItem(
                 import.meta.env.VITE_HASPLAYEDHEADLINE,
@@ -48,6 +51,12 @@ const Home = () => {
           opacity: 0,
           ease: "power4.out",
           delay: 0.4,
+        });
+
+        t3.from(servicesRef.current, {
+          opacity: 0,
+          ease: "power4.out",
+          delay: 2,
         });
       }
     }, [heroRef]);
@@ -95,13 +104,22 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="z-0">
+      <div className="z-0 mb-4" ref={servicesRef}>
         <h1 className="font-bold text-4xl text-center">
           <span className="border-b-2 border-secondary">What we do?</span>
         </h1>
         <Services />
       </div>
-      <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6 mt-4">
+      <div className="z-0 my-8">
+        <div className="flex items-center justify-center">
+          <h1 className="font-bold text-4xl text-center border-b-2 border-secondary">
+            Your tech stack, we have it
+            <span className="text-primary"> covered.</span>
+          </h1>
+        </div>
+        <Stacks />
+      </div>
+      <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6">
         <div className="text-center md:text-xl text-sm">
           We are also <span className="text-primary font-bold">available</span>{" "}
           on

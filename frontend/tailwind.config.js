@@ -22,20 +22,14 @@ export default withMT({
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      animation: {
-        marquee: "marquee 10s linear infinite",
-        marquee2: "marquee2 12s linear infinite",
-      },
-
       keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+        marqueeToLeft: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
-        marquee2: {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0%)" },
-        },
+      },
+      animation: {
+        marqueeToLeft: "marqueeToLeft 30s linear infinite",
       },
       colors: {
         primary: "#489dda",
