@@ -68,7 +68,7 @@ const Navbar = () => {
         </svg>
       </div>
       <div
-        className={`absolute top-0 right-0 h-screen md:hidden bg-white w-screen z-50 ${
+        className={`absolute top-0 right-0 h-screen md:hidden bg-white w-screen z-[9999] ${
           open ? "translate-x-0" : "translate-x-full"
         } transition-all duration-300`}
       >

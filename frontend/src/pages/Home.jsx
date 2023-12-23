@@ -5,6 +5,7 @@ import Clutch from "../assets/clutch.svg";
 import Fiverr from "../assets/fiverr.svg";
 import Hero from "../assets/hero.svg";
 import Upwork from "../assets/upwork.svg";
+import Process from "../components/Process";
 import Services from "../components/Services";
 import Stacks from "../components/Stacks";
 
@@ -83,7 +84,7 @@ const Home = () => {
             <span className="font-bold text-secondary">business</span>
           </h1>
 
-          <h3 ref={sublineRef}>
+          <h3 ref={sublineRef} className="md:text-xl">
             We create strong, user-friendly mobile and web apps to boost your
             business growth and achieve your goals seamlessly
           </h3>
@@ -104,15 +105,23 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="z-0 mb-4" ref={servicesRef}>
-        <h1 className="font-bold text-4xl text-center">
+      <div className="z-0 my-4" ref={servicesRef}>
+        <h1 className="font-bold md:text-4xl text-2xl text-center">
           <span className="border-b-2 border-secondary">What we do?</span>
         </h1>
         <Services />
       </div>
-      <div className="z-0 my-8">
+      <div className="my-28">
         <div className="flex items-center justify-center">
-          <h1 className="font-bold text-4xl text-center border-b-2 border-secondary">
+          <h1 className="font-bold md:text-4xl text-2xl text-center border-b-2 border-secondary">
+            How we work.
+          </h1>
+        </div>
+        <Process />
+      </div>
+      <div className="-z-50 my-28">
+        <div className="flex items-center justify-center">
+          <h1 className="font-bold md:text-4xl text-2xl text-center border-b-2 border-secondary">
             Your tech stack, we have it
             <span className="text-primary"> covered.</span>
           </h1>
