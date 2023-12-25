@@ -14,7 +14,7 @@ const Navbar = () => {
   }, [open]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 bg-white border-b">
+    <div className="fixed top-0 left-0 right-0 bg-white border-b z-50">
       <Link
         to={"/discuss"}
         className="text-center bg-secondary text-white p-1 block"
@@ -31,7 +31,7 @@ const Navbar = () => {
               <Link
                 key={index}
                 to={nav.to}
-                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-secondary after:rounded-full"
+                className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-primary after:rounded-full"
               >
                 {nav.name}
               </Link>

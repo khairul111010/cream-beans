@@ -22,3 +22,10 @@
 *::-webkit-scrollbar-thumb:active {
   @apply bg-secondary;
 }
+
+.react-flow__node-custom .react-flow__handle {
+  width: 12px;
+  height: 6px;
+  border-radius: 2px;
+  background-color: #0a122e;
+}
