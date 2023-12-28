@@ -85,7 +85,7 @@ const initialNodes = [
     position: { x: 1350, y: 200 },
     data: {
       image: meeting,
-      title: "6. Daily meetings",
+      title: "6. Meetings",
       description:
         "Brief sync meetings: progress, challenges, task alignment within the team.",
     },

@@ -13,7 +13,7 @@ import {
 const servicesData = [
   {
     id: 1,
-    title: "BlockChain Development",
+    title: "Blockchain Development",
     description: (
       <>
         <p>
@@ -25,13 +25,13 @@ const servicesData = [
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Blockchain development tailored to your requirements.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            Responsive and innovative solutions.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
@@ -47,21 +47,20 @@ const servicesData = [
     description: (
       <>
         <p>
-          We create modern and responsive Blockchain projects tailored to your
-          needs.
+          We create modern and responsive web projects tailored to your needs.
         </p>
         <ul className="list-none pl-4">
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Tailored solutions for your specific requirements.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            Responsive and user-friendly web development.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
@@ -70,13 +69,14 @@ const servicesData = [
     imageUrl:
       "https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?cs=srgb&dl=pexels-pixabay-276452.jpg&fm=jpg",
   },
+
   {
     id: 3,
     title: "Mobile App Development",
     description: (
       <>
         <p>
-          We create modern and responsive Blockchain projects tailored to your
+          We create modern and responsive mobile applications tailored to your
           needs.
         </p>
         <ul className="list-none pl-4">
@@ -84,13 +84,13 @@ const servicesData = [
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Tailored solutions for your specific mobile app requirements.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            Responsive and user-friendly mobile app development.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
@@ -100,13 +100,14 @@ const servicesData = [
     imageUrl:
       "https://images.spiceworks.com/wp-content/uploads/2023/10/12122423/mobile-app-development.jpg",
   },
+
   {
     id: 4,
     title: "Cyber Security",
     description: (
       <>
         <p>
-          We create modern and responsive Blockchain projects tailored to your
+          We provide modern and robust cybersecurity solutions tailored to your
           needs.
         </p>
         <ul className="list-none pl-4">
@@ -114,13 +115,13 @@ const servicesData = [
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Comprehensive security measures to safeguard your digital assets.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            Proactive threat detection and response strategies.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
@@ -130,35 +131,37 @@ const servicesData = [
     imageUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTygKl2VfctjD2JmH3gs2zfRfOfibTCWwKMUg&usqp=CAU",
   },
+
   {
     id: 5,
     title: "UI/UX Design",
     description: (
       <>
         <p>
-          We create modern and responsive Blockchain projects tailored to your
-          needs.
+          We create modern and responsive UI/UX designs for a variety of
+          projects.
         </p>
         <ul className="list-none pl-4">
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Innovative design solutions that captivate your audience.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            User-centric interfaces for seamless interactions.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
       </>
     ),
+
     icon: FaPalette,
     imageUrl:
-      "data:image/jpeg;base64,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",
+      "https://www.exposit.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/12/Blog_cover-109-1024x386.jpeg.webp",
   },
   {
     id: 6,
@@ -166,21 +169,21 @@ const servicesData = [
     description: (
       <>
         <p>
-          We create modern and responsive Blockchain projects tailored to your
-          needs.
+          We specialize in comprehensive testing and quality assurance for
+          diverse projects, ensuring optimal performance and reliability.
         </p>
         <ul className="list-none pl-4">
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Rigorous testing methodologies for robust project outcomes.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            Quality assurance protocols tailored to project requirements.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
@@ -195,7 +198,7 @@ const servicesData = [
     description: (
       <>
         <p>
-          We create modern and responsive Blockchain projects tailored to your
+          We provide modern and responsive DevOps services tailored to your
           needs.
         </p>
         <ul className="list-none pl-4">
@@ -203,13 +206,13 @@ const servicesData = [
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            One line of notes here.
+            Customized solutions for your business.
           </li>
           <li className="flex items-center mb-2">
             <IconContext.Provider value={{ className: "text-green-500 mr-2" }}>
               <FaCheckDouble />
             </IconContext.Provider>
-            Another line of notes here.
+            Cutting-edge technology and expertise.
           </li>
           {/* Add more list items with icons as needed */}
         </ul>
