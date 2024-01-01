@@ -7,10 +7,10 @@ export const routes = [
     name: "Project",
     to: "/project",
   },
-  {
-    name: "Team",
-    to: "/team",
-  },
+  // {
+  //   name: "Team",
+  //   to: "/team",
+  // },
   {
     name: "About Us",
     to: "/about",
