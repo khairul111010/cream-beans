@@ -126,14 +126,86 @@ const initialNodes = [
 ];
 
 const initialEdges = [
-  { id: "e1-2", source: "1", target: "2", animated: true, type: "smoothstep" },
-  { id: "e2-3", source: "2", target: "3", animated: true, type: "smoothstep" },
-  { id: "e3-4", source: "3", target: "4", animated: true, type: "smoothstep" },
-  { id: "e4-5", source: "4", target: "5", animated: true, type: "smoothstep" },
-  { id: "e5-6", source: "5", target: "6", animated: true, type: "smoothstep" },
-  { id: "e6-7", source: "6", target: "7", animated: true, type: "smoothstep" },
-  { id: "e7-8", source: "7", target: "8", animated: true, type: "smoothstep" },
-  { id: "e8-9", source: "8", target: "9", animated: true, type: "smoothstep" },
+  {
+    id: "e1-2",
+    source: "1",
+    target: "2",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e2-3",
+    source: "2",
+    target: "3",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e3-4",
+    source: "3",
+    target: "4",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e4-5",
+    source: "4",
+    target: "5",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e5-6",
+    source: "5",
+    target: "6",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e6-7",
+    source: "6",
+    target: "7",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e7-8",
+    source: "7",
+    target: "8",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
+  {
+    id: "e8-9",
+    source: "8",
+    target: "9",
+    animated: true,
+    type: "smoothstep",
+    style: {
+      stroke: "#489dda",
+    },
+  },
 ];
 
 const minimapStyle = {

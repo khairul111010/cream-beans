@@ -1,11 +1,11 @@
 export const routes = [
   {
     name: "Services",
-    to: "/services",
+    to: "#services",
   },
   {
-    name: "Project",
-    to: "/project",
+    name: "Industry",
+    to: "#our_industry_expertise",
   },
   // {
   //   name: "Team",
@@ -13,6 +13,6 @@ export const routes = [
   // },
   {
     name: "About Us",
-    to: "/about",
+    to: "#about",
   },
 ];

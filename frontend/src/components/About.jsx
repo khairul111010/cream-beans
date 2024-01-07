@@ -1,4 +1,4 @@
-import Leaders from "../components/Leaders";
+import Leaders from "./Leaders";
 import dipu from "../assets/leaders/dipu.png";
 import piash from "../assets/leaders/piash.png";
 import shamim from "../assets/leaders/shamim.png";
@@ -25,9 +25,9 @@ const leaders = [
 
 function About() {
   return (
-    <div className="h-screen w-full">
-      <div className="font-bold text-4xl text-center py-8">Our Leaders</div>
-      <div className="flex flex-col gap-4 md:flex-row items-center justify-between max-w-[80%] mx-auto">
+    <div id="about" className="w-full">
+      <div className="font-bold md:text-4xl text-2xl text-center py-8">Our Leaders</div>
+      <div className="flex flex-col gap-4 md:flex-row items-center justify-between md:w-[65%] w-[80%] mx-auto">
         {leaders.map((i, index) => (
           <Leaders
             key={index}
@@ -39,7 +39,7 @@ function About() {
         ))}
       </div>
       <div className="md:text-3xl text-center py-16 italic">
-        Our goal is to help your business{" "}
+        Our goal is to help your <span className="underline text-secondary">business</span>
         <span className="font-bold text-primary md:px-2">GROW</span> by providing
         you software that will make your work faster and easier.
       </div>

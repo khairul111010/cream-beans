@@ -2,14 +2,14 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Leaders = ({ name, position, link, image }) => {
   return (
-    <div className="rounded-lg shadow-md flex flex-col items-center gap-2">
+    <div className="rounded-lg shadow-md flex flex-col items-center gap-2 px-4 py-2">
       <div>
-        <img src={image} alt="" className="md:h-30 md:w-30 h-15 w-15 object-cover rounded-full"/>
+        <img src={image} alt="" className="md:h-64 md:w-64 h-48 w-48 object-cover rounded-full"/>
       </div>
-      <div className="text-3xl">
+      <div className="md:text-xl text-base">
         {name}
       </div>
-      <div className="italic font-medium text-gray-800 text-lg">
+      <div className="italic font-medium text-gray-800 ">
        - {position}
       </div>
       <div className="py-4">

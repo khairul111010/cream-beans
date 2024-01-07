@@ -8,6 +8,8 @@ import Upwork from "../assets/upwork.svg";
 import Process from "../components/Process";
 import Services from "../components/Services";
 import Stacks from "../components/Stacks";
+import Industry from "../components/Industry";
+import About from "../components/About";
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -105,7 +107,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <div className="z-0 my-4" ref={servicesRef}>
+      <div id="services" className="z-0 my-4" ref={servicesRef}>
         <h1 className="font-bold md:text-4xl text-2xl text-center">
           <span className="border-b-2 border-secondary">What we do?</span>
         </h1>
@@ -128,6 +130,21 @@ const Home = () => {
         </div>
         <Stacks />
       </div>
+      <div id="our_industry_expertise" className="my-28 w-[80%] mx-auto md:grid md:grid-cols-2 md:items-center">
+        <div className="flex flex-col items-center">
+          <h1 className="font-bold md:text-4xl text-2xl">
+            Our Industry <span className="text-primary">Expertise</span>
+          </h1>
+          <p>
+            Get the customizable services you need! We provide web and app
+            development services to businesses and startups in different
+            industries
+          </p>
+        </div>
+        <Industry />
+      </div>
+      <About/>
+      {/* <div>client review</div> */}
       <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6">
         <div className="text-center md:text-xl text-sm">
           We are also <span className="text-primary font-bold">available</span>{" "}

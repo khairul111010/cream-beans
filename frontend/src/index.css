@@ -4,6 +4,7 @@
 
 * {
   font-family: "Afacad", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* style scrollbar */

@@ -28,13 +28,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-5">
           {routes.map((nav, index) => {
             return (
-              <Link
+              <a
                 key={index}
-                to={nav.to}
+                // to={nav.to}
+                href={`${nav.to}`}
                 className="relative after:content-[''] after:opacity-0 hover:after:opacity-100 after:absolute after:top-0 after:-right-2 after:h-2 after:w-2 after:bg-primary after:rounded-full"
               >
                 {nav.name}
-              </Link>
+              </a>
             );
           })}
         </div>
