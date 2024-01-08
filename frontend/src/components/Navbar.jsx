@@ -15,12 +15,12 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 right-0 bg-white border-b z-50">
-      <Link
-        to={"/discuss"}
+      <a
+        href="#discuss"
         className="text-center bg-secondary text-white p-1 block"
       >
         Learn how we can increase your web visibility
-      </Link>
+      </a>
       <div className="max-w-[80%] py-2 hidden mx-auto md:flex items-center justify-between">
         <Link to={"/"} className="text-2xl font-semibold">
           CreamBeans
@@ -39,12 +39,12 @@ const Navbar = () => {
             );
           })}
         </div>
-        <Link
+        <a
           className="bg-primary px-3 py-2 text-white hover:bg-secondary transition-all duration-300 rounded-md"
-          to={"/discuss"}
+          href="#discuss"
         >
           Discuss a Project
-        </Link>
+        </a>
       </div>
 
       {/* Mobile Navbar  */}
@@ -96,9 +96,10 @@ const Navbar = () => {
         <div className="flex flex-col text-lg border border-black/20 divide-y divide-black/20">
           {routes.map((nav, index) => {
             return (
-              <Link
+              <a
                 key={index}
-                to={nav.to}
+                // to={nav.to}
+                href={nav.to}
                 className="p-4 flex items-center justify-between"
               >
                 <div>{nav.name}</div>
@@ -116,9 +117,26 @@ const Navbar = () => {
                     d="M8.25 4.5l7.5 7.5-7.5 7.5"
                   />
                 </svg>
-              </Link>
+              </a>
             );
           })}
+          <a href="#discuss" className="p-4 flex items-center justify-between">
+            <div>Let's Discuss</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </a>
         </div>
       </div>
     </div>

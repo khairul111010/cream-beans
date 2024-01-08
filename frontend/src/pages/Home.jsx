@@ -91,13 +91,13 @@ const Home = () => {
             business growth and achieve your goals seamlessly
           </h3>
 
-          <button
+          <a
             ref={buttonRef}
-            onClick={() => navigate("/discuss")}
+            href="#discuss"
             className="cursor-pointer bg-primary px-3 py-2 text-white hover:bg-white hover:text-secondary border hover:border-secondary rounded-md w-fit"
           >
             Let&apos;s discuss
-          </button>
+          </a>
         </div>
         <div ref={heroBannerRef} className="hidden md:block">
           <img
@@ -130,7 +130,10 @@ const Home = () => {
         </div>
         <Stacks />
       </div>
-      <div id="our_industry_expertise" className="my-28 w-[80%] mx-auto md:grid md:grid-cols-2 md:items-center">
+      <div
+        id="our_industry_expertise"
+        className="my-28 w-[80%] mx-auto md:grid md:grid-cols-2 md:items-center"
+      >
         <div className="flex flex-col items-center">
           <h1 className="font-bold md:text-4xl text-2xl">
             Our Industry <span className="text-primary">Expertise</span>
@@ -143,8 +146,18 @@ const Home = () => {
         </div>
         <Industry />
       </div>
-      <About/>
+      <About />
       {/* <div>client review</div> */}
+
+      <div id="discuss" className="my-28 max-w-[80%] mx-auto">
+        <h1 className="font-bold md:text-4xl text-2xl text-center mb-8">
+          Let's <span className="text-primary">Talk</span>
+        </h1>
+        <iframe
+          className="w-full h-[600px] mx-auto"
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ZkUNVV7hOmpvJEvdsTqzvrYTAWbS_-d1k4HqKaLqFln_PSI6XR_GEI9c2-yjuVMx2L85OwQ2x?gv=true"
+        ></iframe>
+      </div>
       <div className="md:max-w-[80%] max-w-[90%] mx-auto border py-3 md:py-10 rounded-lg bg-brown-200/20 mb-6">
         <div className="text-center md:text-xl text-sm">
           We are also <span className="text-primary font-bold">available</span>{" "}
